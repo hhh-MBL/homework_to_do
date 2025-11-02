@@ -67,6 +67,39 @@ npm run build
 
 The built files will be in the `dist` directory.
 
+## Deployment to GitHub Pages
+
+### Option 1: Automatic Deployment (Recommended)
+
+1. Push your code to GitHub
+2. Go to your repository Settings → Pages
+3. Under "Build and deployment", select "GitHub Actions" as the source
+4. The workflow will automatically build and deploy your site
+
+### Option 2: Manual Deployment
+
+1. Install gh-pages package (already included):
+```bash
+npm install --save-dev gh-pages
+```
+
+2. Build and deploy:
+```bash
+npm run deploy
+```
+
+3. Go to your repository Settings → Pages and select `gh-pages` branch as the source
+
+### After Deployment
+
+Your app will be available at:
+`https://[your-username].github.io/homework_to_do/`
+
+**Important Notes:**
+- Make sure to update the `base` path in `vite.config.js` to match your repository name
+- The app may take a few minutes to become available after deployment
+- Browser notifications will only work on HTTPS sites (GitHub Pages provides this automatically)
+
 ## Usage
 
 ### Creating a Reminder
